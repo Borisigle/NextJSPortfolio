@@ -1,5 +1,5 @@
 
-export default function handler(req, res) {
+export default function projects(req, res) {
     res.status(200).json([{
       name: "Coin status",
       stack: "React, Chackra UI",
