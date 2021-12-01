@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, HStack, Text, Stack, Image, Flex, Link} from '@chakra-ui/react';
-const Proyects = ( {data}) => {
+const Proyects = ({data}) => {
     return (
     <>
         <Box id="proyects" py={4}>
