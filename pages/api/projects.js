@@ -1,6 +1,7 @@
 
 export default function projects(req, res) {
-    res.status(200).json({[{
+    res.status(200).json([
+    {
       "name": "Coin status",
       "stack": "React, Chackra UI",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et orci tristique, porta neque et, ultricies leo. Vivamus non maximus magna, fringilla commodo enim. ",
@@ -24,5 +25,4 @@ export default function projects(req, res) {
       "site_url": "https://intervaltimerapp.netlify.app/",
       "image": "",
     }
-  ]})
-  }
+  ])}
