@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, HStack, Text, Stack, Image, Flex } from "@chakra-ui/react";
-import myPhoto from "../myPhoto.jpg";
 
 const Main = () => {
   return (
-    <Box>
+    <Box mb="9rem" >
       <Flex justifyContent="space-between" alignItems="center">
         <Stack>
           <Text fontSize="3rem " fontWeight="bold" mb="0px !important">
@@ -23,7 +22,7 @@ const Main = () => {
             development, serverless, and React / Next.js.
           </Text>
         </Stack>
-        <Image borderRadius="full" boxSize="150px" src={myPhoto}></Image>
+        <Image borderRadius="full" boxSize="150px" src="/myPhoto.jpg" alt="Boris Iglesias"></Image>
       </Flex>
     </Box>
   );
