@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react";
 import Main from "../components/Main";
 import Nav from "../components/Nav";
 import Proyects from "../components/Proyects";
-import projects from "pages/api/projects";
+import projects from "./api/projects";
 
 function Home({ data }) {
   return (
