@@ -1,10 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Box } from "@chakra-ui/react";
 import Main from "../components/Main";
 import Nav from "../components/Nav";
 import Projects from "../components/Projects";
-
+import Contact from "../components/Contact";
 
 function Home({ data }) {
   return (
@@ -12,16 +10,18 @@ function Home({ data }) {
       <Nav />
       <Main />
       <Projects data={data} />
-      {console.log}
+      <Contact />
     </Box>
   );
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("https://borisiglesias.vercel.app/api/projects", { headers: {
-    Accept: 'application/json, text/plain, */*',
-    'User-Agent': '*',
-  }});
+  const res = await fetch("https://borisiglesias.vercel.app/api/projects", {
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "User-Agent": "*",
+    },
+  });
   const data = await res.json();
 
   return {
