@@ -21,6 +21,7 @@ const Contact = () => {
               variant="flushed"
               placeholder="Email adress"
               _placeholder={{ color: "#646c78" }}
+              mb="2rem"
             />
             <Input
               type="text"
@@ -30,6 +31,7 @@ const Contact = () => {
               variant="flushed"
               placeholder="First and last name"
               _placeholder={{ color: "#646c78" }}
+              mb="2rem"
             />
             <ValidationError
               prefix="Email"
