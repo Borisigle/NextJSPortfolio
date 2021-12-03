@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Text, Box, Stack, Input } from "@chakra-ui/react";
+import { Text, Box, Stack, Input, Textarea, Button } from "@chakra-ui/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvolpybj");
   if (state.succeeded) {
@@ -8,7 +8,7 @@ const Contact = () => {
   }
   return (
     <Box id="contact">
-      <Text fontSize="2.5rem" fontWeight="bold">
+      <Text fontSize="2.5rem" fontWeight="bold" mb="3rem">
         Contactame
       </Text>
       <Box bg="#f3f4f6" mb="3rem" borderRadius="3xl" padding="2rem">
@@ -22,6 +22,7 @@ const Contact = () => {
               placeholder="Email adress"
               _placeholder={{ color: "#646c78" }}
               mb="2rem"
+              mt="1rem !important"
             />
             <Input
               type="text"
@@ -31,22 +32,28 @@ const Contact = () => {
               variant="flushed"
               placeholder="First and last name"
               _placeholder={{ color: "#646c78" }}
-              mb="2rem"
+              mb="2rem !important"
             />
             <ValidationError
               prefix="Email"
               field="email"
               errors={state.errors}
             />
-            <textarea id="message" name="message" />
+            <Textarea
+              placeholder="Message"
+              id="message"
+              name="message"
+              variant="flushed"
+              _placeholder={{ color: "#646c78" }}
+            />
             <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
             />
-            <button type="submit" disabled={state.submitting}>
+            <Button size="md" type="submit" disabled={state.submitting}>
               Submit
-            </button>
+            </Button>
           </Stack>
         </form>
       </Box>
