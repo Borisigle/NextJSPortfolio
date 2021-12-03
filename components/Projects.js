@@ -4,9 +4,7 @@ const Proyects = ({ data }) => {
   return (
     <>
       <Box id="proyects" py={4} mb="9rem">
-        <Text fontSize="2.5rem" fontWeight="800" mb="3rem">
-          Proyectos
-        </Text>
+        <Text variant="subtitle">Proyectos</Text>
         {data.map((proyect, index) => {
           const { name, stack, description, github_url, site_url, image } =
             proyect;

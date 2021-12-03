@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, Flex, HStack, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Link, Button } from "@chakra-ui/react";
 
 const Nav = () => {
   useEffect(() => {
@@ -37,7 +37,7 @@ const Nav = () => {
             Contacto
           </Link>
         </HStack>
-        <Text>A</Text>
+        <Button>A</Button>
       </Flex>
     </Box>
   );

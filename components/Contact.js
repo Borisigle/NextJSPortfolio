@@ -8,9 +8,7 @@ const Contact = () => {
   }
   return (
     <Box id="contact">
-      <Text fontSize="2.5rem" fontWeight="bold" mb="3rem">
-        Contactame
-      </Text>
+      <Text variant="subtitle">Contactame</Text>
       <Box bg="#f3f4f6" mb="3rem" borderRadius="3xl" padding="2rem">
         <form onSubmit={handleSubmit}>
           <Stack>
