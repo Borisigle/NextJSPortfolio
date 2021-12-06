@@ -5,16 +5,15 @@ import "@fontsource/inter/800.css";
 import { mode } from "@chakra-ui/theme-tools";
 
 const styles = {
-  global: {
+  global: (props) => ({
     body: {
-      bg: mode("#f0e7db", "#202023"),
-      color: "black",
+      bg: mode("#ffffff", "#111111")(props),
       fontFamily: "inter",
       maxWidth: "700px",
       margin: "0 auto",
       padding: "1rem 1rem",
     },
-  },
+  }),
 };
 
 const components = {

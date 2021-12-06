@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Flex, HStack, Text, Link, Button } from "@chakra-ui/react";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const Nav = () => {
   useEffect(() => {
@@ -37,7 +38,7 @@ const Nav = () => {
             Contacto
           </Link>
         </HStack>
-        <Button>A</Button>
+        <ThemeToggleButton />
       </Flex>
     </Box>
   );
