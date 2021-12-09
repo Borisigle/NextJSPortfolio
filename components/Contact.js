@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Text, Box, Stack, Input, Textarea, Button } from "@chakra-ui/react";
+import { Text, Box, Stack, Input, Textarea, Button, useColorModeValue } from "@chakra-ui/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvolpybj");
   if (state.succeeded) {
@@ -8,8 +8,8 @@ const Contact = () => {
   }
   return (
     <Box id="contact">
-      <Text variant="subtitle">Contactame</Text>
-      <Box bg="#f3f4f6" mb="3rem" borderRadius="3xl" padding="2rem">
+      <Text variant="subtitle">Hablemos</Text>
+      <Box bg={useColorModeValue("#f3f4f6", "#1a1a1a")} mb="3rem" borderRadius="3xl" padding="2rem">
         <form onSubmit={handleSubmit}>
           <Stack>
             <Input
@@ -17,20 +17,23 @@ const Contact = () => {
               type="email"
               name="email"
               variant="flushed"
+              focusBorderColor="accent"
               placeholder="Email adress"
-              _placeholder={{ color: "#646c78" }}
+              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
               mb="2rem"
               mt="1rem !important"
+              required
             />
             <Input
               type="text"
               name="name"
               id="full-name"
-              required=""
               variant="flushed"
+              focusBorderColor="accent"
               placeholder="First and last name"
-              _placeholder={{ color: "#646c78" }}
+              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
               mb="2rem !important"
+              required
             />
             <ValidationError
               prefix="Email"
@@ -39,17 +42,19 @@ const Contact = () => {
             />
             <Textarea
               placeholder="Message"
+              focusBorderColor="accent"
               id="message"
               name="message"
               variant="flushed"
-              _placeholder={{ color: "#646c78" }}
+              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
+              required
             />
             <ValidationError
               prefix="Message"
               field="message"
               errors={state.errors}
             />
-            <Button size="md" type="submit" disabled={state.submitting}>
+            <Button bg="accent" color="white" size="md" type="submit" disabled={state.submitting} mt="2rem !important">
               Submit
             </Button>
           </Stack>

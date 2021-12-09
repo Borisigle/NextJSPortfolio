@@ -4,6 +4,13 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/800.css";
 import { mode } from "@chakra-ui/theme-tools";
 
+
+const colors = {
+  accent : "#ff63c3",
+  dark : "#1a1a1a",
+  light : "#f3f4f6",
+}
+
 const styles = {
   global: (props) => ({
     body: {
@@ -33,6 +40,6 @@ const config = {
   useSystemColorMode: true,
 };
 
-const myTheme = extendTheme({ styles, components, config });
+const myTheme = extendTheme({ colors, styles, components, config });
 
 export default myTheme;

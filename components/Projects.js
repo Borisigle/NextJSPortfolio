@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, HStack, Text, Stack, Image, Flex, Link } from "@chakra-ui/react";
+import { Box, HStack, Text, Stack, Image, Flex, Link, useColorModeValue } from "@chakra-ui/react";
 const Proyects = ({ data }) => {
   return (
     <>
@@ -11,21 +11,21 @@ const Proyects = ({ data }) => {
           return (
             <Box
               key={index}
-              bg="#f3f4f6"
               mb="3rem"
               borderRadius="3xl"
               padding="2rem"
+              bg={useColorModeValue("light", "dark")}
             >
               <Text fontSize="3xl" fontWeight="bold">
                 {name}
               </Text>
-              <Text mb="0.3rem" fontWeight="600" color="#670cc2">
+              <Text mb="0.3rem" fontWeight="600" color="accent">
                 {stack}
               </Text>
               <Text
                 lineHeight="1.8rem"
                 fontSize="1.1rem"
-                color="#646c78"
+                color={useColorModeValue("gray.700", "gray.400")}
                 mt="4"
                 mb="4"
               >
@@ -34,7 +34,7 @@ const Proyects = ({ data }) => {
               <Link
                 href={site_url}
                 mr="0.7rem"
-                color="#670cc2"
+                color="accent"
                 fontWeight="600"
                 isExternal
               >
@@ -42,7 +42,7 @@ const Proyects = ({ data }) => {
               </Link>
               <Link
                 href={github_url}
-                color="#670cc2"
+                color="accent"
                 fontWeight="600"
                 isExternal
               >

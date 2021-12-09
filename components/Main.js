@@ -3,7 +3,7 @@ import { Box, HStack, Text, Stack, Image, Flex } from "@chakra-ui/react";
 
 const Main = () => {
   return (
-    <Box mb="9rem" >
+    <Box id="home" mb="9rem" mt={32} >
       <Flex justifyContent="space-between" alignItems="center">
         <Stack>
           <Text fontSize="3rem " fontWeight="bold" mb="0px !important">
