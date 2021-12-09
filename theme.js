@@ -4,17 +4,16 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/800.css";
 import { mode } from "@chakra-ui/theme-tools";
 
-
 const colors = {
-  accent : "#ff63c3",
-  dark : "#1a1a1a",
-  light : "#f3f4f6",
-}
+  accent: "#ff63c3",
+  dark: "#1a1a1a",
+  light: "#ffffff",
+};
 
 const styles = {
   global: (props) => ({
     body: {
-      bg: mode("#ffffff", "#111111")(props),
+      bg: mode("#f3f4f6", "#111111")(props),
       fontFamily: "inter",
       maxWidth: "700px",
       margin: "0 auto",

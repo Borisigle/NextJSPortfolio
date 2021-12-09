@@ -1,6 +1,14 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Text, Box, Stack, Input, Textarea, Button, useColorModeValue } from "@chakra-ui/react";
+import {
+  Text,
+  Box,
+  Stack,
+  Input,
+  Textarea,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvolpybj");
   if (state.succeeded) {
@@ -9,7 +17,12 @@ const Contact = () => {
   return (
     <Box id="contact">
       <Text variant="subtitle">Hablemos</Text>
-      <Box bg={useColorModeValue("#f3f4f6", "#1a1a1a")} mb="3rem" borderRadius="3xl" padding="2rem">
+      <Box
+        bg={useColorModeValue("light", "dark")}
+        mb="3rem"
+        borderRadius="3xl"
+        padding="2rem"
+      >
         <form onSubmit={handleSubmit}>
           <Stack>
             <Input
@@ -19,7 +32,9 @@ const Contact = () => {
               variant="flushed"
               focusBorderColor="accent"
               placeholder="Email adress"
-              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
+              _placeholder={{
+                color: useColorModeValue("gray.800", "gray.300"),
+              }}
               mb="2rem"
               mt="1rem !important"
               required
@@ -31,7 +46,9 @@ const Contact = () => {
               variant="flushed"
               focusBorderColor="accent"
               placeholder="First and last name"
-              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
+              _placeholder={{
+                color: useColorModeValue("gray.800", "gray.300"),
+              }}
               mb="2rem !important"
               required
             />
@@ -46,7 +63,9 @@ const Contact = () => {
               id="message"
               name="message"
               variant="flushed"
-              _placeholder={{ color: useColorModeValue("gray.700", "gray.300")}}
+              _placeholder={{
+                color: useColorModeValue("gray.800", "gray.300"),
+              }}
               required
             />
             <ValidationError
@@ -54,8 +73,15 @@ const Contact = () => {
               field="message"
               errors={state.errors}
             />
-            <Button bg="accent" color="white" size="md" type="submit" disabled={state.submitting} mt="2rem !important">
-              Submit
+            <Button
+              bg="accent"
+              color="white"
+              size="md"
+              type="submit"
+              disabled={state.submitting}
+              mt="3rem !important"
+            >
+              Send
             </Button>
           </Stack>
         </form>
