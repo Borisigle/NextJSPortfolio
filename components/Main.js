@@ -3,7 +3,7 @@ import { Box, HStack, Text, Stack, Image, Flex } from "@chakra-ui/react";
 
 const Main = () => {
   return (
-    <Box id="home" mb="9rem" mt={32} >
+    <Box id="home" mb="9rem" mt={32}>
       <Flex justifyContent="space-between" alignItems="center">
         <Stack>
           <Text fontSize="3rem " fontWeight="bold" mb="0px !important">
@@ -18,11 +18,17 @@ const Main = () => {
             Front-end developer React/NextJS
           </Text>
           <Text>
-            Helping developers build a faster web. Teaching about web
-            development, serverless, and React / Next.js.
+            Hola! mi nombre es Boris, soy desarrollador web, me gusta crear
+            sitios y aplicaciones web focalizandome en el diseño y las buenas
+            practicas.
           </Text>
         </Stack>
-        <Image borderRadius="full" boxSize="150px" src="/myPhoto.jpg" alt="Boris Iglesias"></Image>
+        <Image
+          borderRadius="full"
+          boxSize="150px"
+          src="/myPhoto.jpg"
+          alt="Boris Iglesias"
+        ></Image>
       </Flex>
     </Box>
   );
