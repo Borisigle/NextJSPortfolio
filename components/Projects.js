@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, HStack, Text, Stack, Image, Flex, Link, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Text,
+  Stack,
+  Image,
+  Flex,
+  Link,
+  useColorModeValue,
+} from "@chakra-ui/react";
 const Proyects = ({ data }) => {
   return (
     <>
@@ -22,13 +31,7 @@ const Proyects = ({ data }) => {
               <Text mb="0.3rem" fontWeight="600" color="accent">
                 {stack}
               </Text>
-              <Text
-                lineHeight="1.8rem"
-                fontSize="1.1rem"
-                color={useColorModeValue("gray.700", "gray.400")}
-                mt="4"
-                mb="4"
-              >
+              <Text lineHeight="1.8rem" fontSize="1.1rem" mt="4" mb="4">
                 {description}
               </Text>
               <Link
