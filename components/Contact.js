@@ -32,9 +32,6 @@ const Contact = () => {
               variant="flushed"
               focusBorderColor="accent"
               placeholder="Email adress"
-              _placeholder={{
-                color: useColorModeValue("gray.800", "gray.300"),
-              }}
               mb="2rem"
               mt="1rem !important"
               required
@@ -46,9 +43,6 @@ const Contact = () => {
               variant="flushed"
               focusBorderColor="accent"
               placeholder="First and last name"
-              _placeholder={{
-                color: useColorModeValue("gray.800", "gray.300"),
-              }}
               mb="2rem !important"
               required
             />
@@ -63,9 +57,6 @@ const Contact = () => {
               id="message"
               name="message"
               variant="flushed"
-              _placeholder={{
-                color: useColorModeValue("gray.800", "gray.300"),
-              }}
               required
             />
             <ValidationError
