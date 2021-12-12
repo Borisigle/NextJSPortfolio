@@ -11,6 +11,9 @@ import {
 } from "@chakra-ui/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvolpybj");
+
+  const bg = useColorModeValue("light", "dark");
+  
   if (state.succeeded) {
     return <p>Muchas gracias por contactarte!</p>;
   }
@@ -18,7 +21,7 @@ const Contact = () => {
     <Box id="contact">
       <Text variant="subtitle">Hablemos</Text>
       <Box
-        bg={useColorModeValue("light", "dark")}
+        bg={bg}
         mb="3rem"
         borderRadius="3xl"
         padding="2rem"

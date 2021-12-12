@@ -10,6 +10,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 const Proyects = ({ data }) => {
+
+  const bg = useColorModeValue("light", "dark")
+
   return (
     <>
       <Box id="proyects" py={4} mb="9rem">
@@ -23,7 +26,7 @@ const Proyects = ({ data }) => {
               mb="3rem"
               borderRadius="3xl"
               padding="2rem"
-              bg={useColorModeValue("light", "dark")}
+              bg={bg}
             >
               <Text fontSize="3xl" fontWeight="bold">
                 {name}
