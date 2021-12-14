@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 
 function Home({ data }) {
   return (
-    <Box>
+    <Box px={[2,2,0]}>
       <Nav />
       <Main />
       <Projects data={data} />

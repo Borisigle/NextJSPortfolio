@@ -4,9 +4,17 @@ import { Box, HStack, Text, Stack, Image, Flex } from "@chakra-ui/react";
 const Main = () => {
   return (
     <Box id="home" mb="9rem" mt={32}>
-      <Flex justifyContent="space-between" alignItems="center">
+      <Flex
+        justifyContent="space-between"
+        alignItems={{ base: "flex-start", md: "center" }}
+        direction={{ base: "column-reverse", md: "row" }}
+      >
         <Stack>
-          <Text fontSize="3rem " fontWeight="bold" mb="0px !important">
+          <Text
+            fontWeight="bold"
+            mb="0px !important"
+            fontSize={{ base: "4xl", md: "5xl" }}
+          >
             Boris Iglesias
           </Text>
           <Text
@@ -25,7 +33,8 @@ const Main = () => {
         </Stack>
         <Image
           borderRadius="full"
-          boxSize="150px"
+          boxSize={{ base: "100px", md: "150px" }}
+          mb={{ base: 4, md: 0 }}
           src="/myPhoto.jpg"
           alt="Boris Iglesias"
         ></Image>

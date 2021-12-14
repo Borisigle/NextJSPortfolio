@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Box, Flex, HStack, Text, Link, Button, useColorModeValue} from "@chakra-ui/react";
 import ThemeToggleButton from "./ThemeToggleButton";
+import ResponsiveNav from "./ResponsiveNav";
 
 const Nav = () => {
   useEffect(() => {
@@ -10,7 +11,8 @@ const Nav = () => {
   }, []);
 
   return (
-      <Box w="100%" borderBottom="1px solid" borderBottomColor={useColorModeValue("#EEEEEE", "#232323")}position="fixed" top="0" left="0" right="0" backdropFilter="blur(10px)">
+<>
+      <Box w="100%" borderBottom="1px solid" borderBottomColor={useColorModeValue("#EEEEEE", "#232323")}position="fixed" top="0" left="0" right="0" backdropFilter="blur(10px)" display={{base : "none" , md : "block"}}>
       <Flex justifyContent="space-between" w="700px" m="auto" p="1rem">
         <HStack>
           <Link onClick={() =>
@@ -48,6 +50,9 @@ const Nav = () => {
         <ThemeToggleButton />
       </Flex>
       </Box>
+
+      <ResponsiveNav/>
+      </>
       
   );
 };
