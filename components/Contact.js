@@ -13,7 +13,16 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xvolpybj");
 
   const bg = useColorModeValue("light", "dark");
-  
+  const accentColor = useColorModeValue("accentLight", "accentDark");
+  const contactFormColor = useColorModeValue("#eff6ff", "#101529");
+  const buttonColor = useColorModeValue("accentLight", "accentDark");
+  const borderColor = useColorModeValue("borderLight", "borderDark");
+  const inputColor = useColorModeValue("inputLight", "inputDark");
+  const placeholderColor = useColorModeValue(
+    "placeholderLight",
+    "placeholderDark"
+  );
+
   if (state.succeeded) {
     return <p>Muchas gracias por contactarte!</p>;
   }
@@ -21,7 +30,9 @@ const Contact = () => {
     <Box id="contact">
       <Text variant="subtitle">Hablemos</Text>
       <Box
-        bg={bg}
+        bg={contactFormColor}
+        border="1px solid"
+        borderColor={borderColor}
         mb="3rem"
         borderRadius="3xl"
         padding="2rem"
@@ -29,23 +40,27 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
           <Stack>
             <Input
+              bg={inputColor}
               id="email"
               type="email"
               name="email"
-              variant="flushed"
+              variant="outline"
               focusBorderColor="accent"
               placeholder="Email adress"
+              _placeholder={{ color: placeholderColor }}
               mb="2rem"
               mt="1rem !important"
               required
             />
             <Input
+              bg={inputColor}
               type="text"
               name="name"
               id="full-name"
-              variant="flushed"
+              variant="outline"
               focusBorderColor="accent"
               placeholder="First and last name"
+              _placeholder={{ color: placeholderColor }}
               mb="2rem !important"
               required
             />
@@ -55,11 +70,13 @@ const Contact = () => {
               errors={state.errors}
             />
             <Textarea
+              bg={inputColor}
               placeholder="Message"
+              _placeholder={{ color: placeholderColor }}
               focusBorderColor="accent"
               id="message"
               name="message"
-              variant="flushed"
+              variant="outline"
               required
             />
             <ValidationError
@@ -67,17 +84,17 @@ const Contact = () => {
               field="message"
               errors={state.errors}
             />
-            <Button
-              bg="accent"
-              color="white"
-              size="md"
-              type="submit"
-              disabled={state.submitting}
-              mt="3rem !important"
-            >
-              Send
-            </Button>
           </Stack>
+          <Button
+            bg="#333333"
+            color="white"
+            size="md"
+            type="submit"
+            disabled={state.submitting}
+            mt="3rem !important"
+          >
+            Send
+          </Button>
         </form>
       </Box>
     </Box>

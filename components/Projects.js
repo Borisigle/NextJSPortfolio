@@ -10,12 +10,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 const Proyects = ({ data }) => {
-
-  const bg = useColorModeValue("light", "dark")
+  const bg = useColorModeValue("light", "dark");
+  const accentColor = useColorModeValue("accentLight", "accentDark");
 
   return (
     <>
-      <Box id="proyects" py={4} mb="9rem">
+      <Box id="proyects" pt={24} mb="3rem">
         <Text variant="subtitle">Proyectos</Text>
         {data.map((proyect, index) => {
           const { name, stack, description, github_url, site_url, image } =
@@ -28,27 +28,34 @@ const Proyects = ({ data }) => {
               padding="2rem"
               bg={bg}
             >
-              <Text fontSize="3xl" fontWeight="bold">
+              <Text fontSize="2xl" fontWeight="bold">
                 {name}
               </Text>
-              <Text mb="0.3rem" fontWeight="600" color="accent">
+              <Text
+                fontSize="1xl"
+                mb="0.3rem"
+                fontWeight="600"
+                color={accentColor}
+              >
                 {stack}
               </Text>
-              <Text lineHeight="1.8rem" fontSize="1.1rem" mt="4" mb="4">
+              <Text lineHeight="1.6rem" fontSize="1xl" mt="4" mb="4">
                 {description}
               </Text>
               <Link
+                fontSize="1xl"
                 href={site_url}
                 mr="0.7rem"
-                color="accent"
+                color={accentColor}
                 fontWeight="600"
                 isExternal
               >
                 Visit {"->"}
               </Link>
               <Link
+                color={accentColor}
+                fontSize="1xl"
                 href={github_url}
-                color="accent"
                 fontWeight="600"
                 isExternal
               >
