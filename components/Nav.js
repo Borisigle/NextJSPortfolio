@@ -5,7 +5,6 @@ import {
   HStack,
   Text,
   Link,
-  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
 import ThemeToggleButton from "./ThemeToggleButton";

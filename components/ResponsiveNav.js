@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Text, Flex, VStack } from "@chakra-ui/react";
+import { Box, Text, Flex, VStack, Ico } from "@chakra-ui/react";
 import { BiHomeCircle } from "react-icons/bi";
 import { BiCodeAlt } from "react-icons/bi";
 import { HiOutlineSun } from "react-icons/hi";
+import { HiOutlineMoon } from "react-icons/hi";
 import { BiMailSend } from "react-icons/bi";
-
+import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 const ResponsiveNav = () => {
+  const { toggleColorMode } = useColorMode();
+
   return (
     <Box
       display={{ base: "block", md: "none" }}
@@ -29,8 +32,16 @@ const ResponsiveNav = () => {
         <Flex flexDir="column" alignItems="center">
           <BiMailSend size="1.5rem" />
         </Flex>
-        <Flex flexDir="column" alignItems="center">
-          <HiOutlineSun size="1.5rem" />
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          onClick={toggleColorMode}
+          cursor="pointer"
+        >
+          {useColorModeValue(
+            <HiOutlineMoon size="1.5rem" color="#782672" />,
+            <HiOutlineSun size="1.5rem" color="orange" />
+          )}
         </Flex>
       </Flex>
     </Box>
