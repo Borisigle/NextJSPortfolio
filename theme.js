@@ -38,23 +38,11 @@ const styles = {
   }),
 };
 
-const components = {
-  Text: {
-    variants: {
-      subtitle: {
-        fontSize: "2rem",
-        fontWeight: "800",
-        mb: "2rem",
-      },
-    },
-  },
-};
-
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };
 
-const myTheme = extendTheme({ colors, styles, components, config });
+const myTheme = extendTheme({ colors, styles, config });
 
 export default myTheme;

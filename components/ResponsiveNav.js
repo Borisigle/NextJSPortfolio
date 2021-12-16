@@ -19,7 +19,7 @@ const ResponsiveNav = () => {
       zIndex="999"
       py={4}
     >
-      <Flex justify="space-evenly" color="accent">
+      <Flex justify="space-evenly" color="#868686">
         <Flex flexDir="column" alignItems="center">
           <BiHomeCircle size="1.5rem" />
         </Flex>

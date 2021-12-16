@@ -28,7 +28,14 @@ const Contact = () => {
   }
   return (
     <Box id="contact">
-      <Text variant="subtitle">Hablemos</Text>
+      <Text
+        fontSize={{ base: "1.5rem", md: "2rem" }}
+        fontWeight="800"
+        pt={{ base: 16, md: 24 }}
+        mb="2rem"
+      >
+        Hablemos
+      </Text>
       <Box
         bg={contactFormColor}
         border="1px solid"

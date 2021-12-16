@@ -1,21 +1,12 @@
 import React from "react";
-import {
-  Box,
-  HStack,
-  Text,
-  Stack,
-  Image,
-  Flex,
-  Link,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Text, Link, useColorModeValue } from "@chakra-ui/react";
 const Proyects = ({ data }) => {
   const bg = useColorModeValue("light", "dark");
   const accentColor = useColorModeValue("accentLight", "accentDark");
 
   return (
     <>
-      <Box id="proyects" pt={24} mb="3rem">
+      <Box id="proyects" pt={{ base: 16, md: 24 }} mb="3rem">
         <Text
           fontSize={{ base: "1.5rem", md: "2rem" }}
           fontWeight="800"
