@@ -10,8 +10,8 @@ const ResponsiveNav = () => {
     <Box
       display={{ base: "block", md: "none" }}
       w="100%"
-      bg="gray.100"
-      borderTop="2px solid #eaeaea"
+      bg="#222222"
+      borderTop="1px solid #232323"
       position="fixed"
       bottom="0"
       left="0"

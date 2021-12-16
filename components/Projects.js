@@ -16,7 +16,13 @@ const Proyects = ({ data }) => {
   return (
     <>
       <Box id="proyects" pt={24} mb="3rem">
-        <Text variant="subtitle">Proyectos</Text>
+        <Text
+          fontSize={{ base: "1.5rem", md: "2rem" }}
+          fontWeight="800"
+          mb="2rem"
+        >
+          Proyectos
+        </Text>
         {data.map((proyect, index) => {
           const { name, stack, description, github_url, site_url, image } =
             proyect;
@@ -28,11 +34,14 @@ const Proyects = ({ data }) => {
               padding="2rem"
               bg={bg}
             >
-              <Text fontSize="2xl" fontWeight="bold">
+              <Text
+                fontSize={{ base: "1.3rem", md: "1.5rem" }}
+                fontWeight="bold"
+              >
                 {name}
               </Text>
               <Text
-                fontSize="1xl"
+                fontSize="1rem"
                 mb="0.3rem"
                 fontWeight="600"
                 color={accentColor}
@@ -46,14 +55,14 @@ const Proyects = ({ data }) => {
                 fontSize="1xl"
                 href={site_url}
                 mr="0.7rem"
-                color={accentColor}
+                color="#ff63c3"
                 fontWeight="600"
                 isExternal
               >
                 Visit {"->"}
               </Link>
               <Link
-                color={accentColor}
+                color="#ff63c3"
                 fontSize="1xl"
                 href={github_url}
                 fontWeight="600"

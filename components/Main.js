@@ -13,7 +13,7 @@ const Main = () => {
   const colorText = useColorModeValue("textMutedLight", "textMutedDark");
 
   return (
-    <Box mt={32}>
+    <Box mt={{ base: 4, md: 32 }}>
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "flex-start", md: "center" }}
@@ -23,7 +23,7 @@ const Main = () => {
           <Text
             fontWeight="bold"
             mb="0px !important"
-            fontSize={{ base: "4xl", md: "5xl" }}
+            fontSize={{ base: "1.8rem", md: "2.8rem" }}
           >
             Boris Iglesias
           </Text>
@@ -45,7 +45,7 @@ const Main = () => {
         </Stack>
         <Image
           borderRadius="full"
-          boxSize={{ base: "100px", md: "125px" }}
+          boxSize={{ base: "5.6rem", md: "125px" }}
           mb={{ base: 4, md: 0 }}
           src="/myPhoto.jpg"
           alt="Boris Iglesias"
