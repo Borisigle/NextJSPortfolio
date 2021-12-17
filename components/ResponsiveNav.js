@@ -1,13 +1,32 @@
-import React from "react";
-import { Box, Text, Flex, VStack, Ico } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Box, Text, Flex, VStack, Link } from "@chakra-ui/react";
 import { BiHomeCircle } from "react-icons/bi";
 import { BiCodeAlt } from "react-icons/bi";
 import { HiOutlineSun } from "react-icons/hi";
 import { HiOutlineMoon } from "react-icons/hi";
 import { BiMailSend } from "react-icons/bi";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
-const ResponsiveNav = () => {
+const ResponsiveNav = ({ active, setActive }) => {
   const { toggleColorMode } = useColorMode();
+
+  const NavIcon = ({ icon, href }) => {
+    const isActive = active === href;
+
+    useEffect(() => {
+      setActive(window.location.hash.substr(0));
+    }, []);
+
+    return (
+      <Link
+        fontSize="1.5rem"
+        color={isActive && "activeDark"}
+        href={href}
+        onClick={() => setActive(href)}
+      >
+        {icon}
+      </Link>
+    );
+  };
 
   return (
     <Box
@@ -23,15 +42,9 @@ const ResponsiveNav = () => {
       py={4}
     >
       <Flex justify="space-evenly" color="#868686">
-        <Flex flexDir="column" alignItems="center">
-          <BiHomeCircle size="1.5rem" />
-        </Flex>
-        <Flex flexDir="column" alignItems="center">
-          <BiCodeAlt size="1.5rem" />
-        </Flex>
-        <Flex flexDir="column" alignItems="center">
-          <BiMailSend size="1.5rem" />
-        </Flex>
+        <NavIcon icon={<BiHomeCircle />} href="#home" />
+        <NavIcon icon={<BiCodeAlt />} href="#proyects" />
+        <NavIcon icon={<BiMailSend />} href="#contact" />
         <Flex
           flexDir="column"
           alignItems="center"

@@ -65,7 +65,7 @@ const Nav = () => {
         </Flex>
       </Box>
 
-      <ResponsiveNav />
+      <ResponsiveNav active={active} setActive={setActive} />
     </>
   );
 };
