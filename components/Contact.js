@@ -23,9 +23,7 @@ const Contact = () => {
     "placeholderDark"
   );
 
-  if (state.succeeded) {
-    return <p>Muchas gracias por contactarte!</p>;
-  }
+  console.log(state);
   return (
     <Box id="contact">
       <Text
@@ -58,6 +56,8 @@ const Contact = () => {
               mb="2rem"
               mt="1rem !important"
               required
+              disabled={state.succeeded}
+              autoComplete="off"
             />
             <Input
               bg={inputColor}
@@ -70,6 +70,8 @@ const Contact = () => {
               _placeholder={{ color: placeholderColor }}
               mb="2rem !important"
               required
+              disabled={state.succeeded}
+              autoComplete="off"
             />
             <ValidationError
               prefix="Email"
@@ -85,6 +87,7 @@ const Contact = () => {
               name="message"
               variant="outline"
               required
+              disabled={state.succeeded}
             />
             <ValidationError
               prefix="Message"
@@ -93,14 +96,16 @@ const Contact = () => {
             />
           </Stack>
           <Button
+            isLoading={state.submitting}
+            loadingText="Enviando..."
             bg="#333333"
             color="white"
             size="md"
             type="submit"
-            disabled={state.submitting}
             mt="3rem !important"
+            pointerEvents={state.succeeded ? "none" : "auto"}
           >
-            Send
+            {state.succeeded ? "Enviado" : "Enviar"}
           </Button>
         </form>
       </Box>
