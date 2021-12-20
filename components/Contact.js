@@ -29,7 +29,7 @@ const Contact = () => {
       <Text
         fontSize={{ base: "1.5rem", md: "2rem" }}
         fontWeight="800"
-        pt={{ base: 16, md: 24 }}
+        pt={{ base: 16, md: "none" }}
         mb="2rem"
       >
         Hablemos
@@ -39,7 +39,7 @@ const Contact = () => {
         border="1px solid"
         borderColor={borderColor}
         mb="3rem"
-        borderRadius="3xl"
+        borderRadius="xl"
         padding="2rem"
       >
         <form onSubmit={handleSubmit}>

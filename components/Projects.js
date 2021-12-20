@@ -3,6 +3,10 @@ import { Box, Text, Link, useColorModeValue } from "@chakra-ui/react";
 const Proyects = ({ data }) => {
   const bg = useColorModeValue("light", "dark");
   const accentColor = useColorModeValue("accentLight", "accentDark");
+  const borderColorCard = useColorModeValue(
+    "borderCardLight",
+    "borderCardDark"
+  );
 
   return (
     <>
@@ -20,10 +24,12 @@ const Proyects = ({ data }) => {
           return (
             <Box
               key={index}
-              mb="3rem"
-              borderRadius="3xl"
+              mb="2.2rem"
+              borderRadius="2xl"
               padding="2rem"
               bg={bg}
+              border="1px solid"
+              borderColor={borderColorCard}
             >
               <Text
                 fontSize={{ base: "1.3rem", md: "1.5rem" }}
