@@ -32,7 +32,7 @@ const Contact = () => {
         pt={{ base: 16, md: "none" }}
         mb="2rem"
       >
-        Let's talk
+        Let&#39;s talk
       </Text>
       <Box
         bg={contactFormColor}

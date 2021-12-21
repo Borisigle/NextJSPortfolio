@@ -25,7 +25,7 @@ const Main = () => {
             mb="0px !important"
             fontSize={{ base: "1.8rem", md: "2.8rem" }}
           >
-            Hi there, i'm Boris
+            Hi there, i&#39;m Boris
           </Text>
           <Text
             fontSize="1rem"
@@ -39,7 +39,7 @@ const Main = () => {
             </Box>
           </Text>
           <Text pr={16} color={colorText} fontWeights="400">
-            I'm a front-end developer, based in Cordoba, Argentina.
+            I&#39;m a front-end developer, based in Cordoba, Argentina.
             <br /> I ♥ music, drawing, playing guitar and video games.
           </Text>
         </Stack>
