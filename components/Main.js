@@ -13,7 +13,7 @@ const Main = () => {
   const colorText = useColorModeValue("textMutedLight", "textMutedDark");
 
   return (
-    <Box mt={{ base: 4, md: 32 }}>
+    <Box mt={{ base: 16, md: 32 }}>
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "flex-start", md: "center" }}
@@ -40,7 +40,7 @@ const Main = () => {
           </Text>
           <Text pr={16} color={colorText} fontWeights="400">
             I&#39;m a front-end developer, based in Cordoba, Argentina.
-            <br /> I ♥ music, drawing, playing guitar and video games.
+            <br /> I ♡ music, drawing, playing guitar and video games.
           </Text>
         </Stack>
         <Image
