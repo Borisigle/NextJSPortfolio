@@ -7,6 +7,7 @@ const Proyects = ({ data }) => {
     "borderCardLight",
     "borderCardDark"
   );
+  const colorText = useColorModeValue("textMutedLight", "textMutedDark");
 
   return (
     <>
@@ -16,7 +17,7 @@ const Proyects = ({ data }) => {
           fontWeight="800"
           mb="2rem"
         >
-          Proyectos
+          Proyects
         </Text>
         {data.map((proyect, index) => {
           const { name, stack, description, github_url, site_url, image } =
@@ -45,21 +46,27 @@ const Proyects = ({ data }) => {
               >
                 {stack}
               </Text>
-              <Text lineHeight="1.6rem" fontSize="1xl" mt="4" mb="4">
+              <Text
+                lineHeight="1.6rem"
+                fontSize="1xl"
+                mt="4"
+                mb="4"
+                color={colorText}
+              >
                 {description}
               </Text>
               <Link
                 fontSize="1xl"
                 href={site_url}
                 mr="0.7rem"
-                color="#ff63c3"
+                color={accentColor}
                 fontWeight="600"
                 isExternal
               >
                 Visit {"->"}
               </Link>
               <Link
-                color="#ff63c3"
+                color={accentColor}
                 fontSize="1xl"
                 href={github_url}
                 fontWeight="600"

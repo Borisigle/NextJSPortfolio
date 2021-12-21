@@ -32,7 +32,7 @@ const Contact = () => {
         pt={{ base: 16, md: "none" }}
         mb="2rem"
       >
-        Hablemos
+        Let's talk
       </Text>
       <Box
         bg={contactFormColor}
@@ -97,7 +97,7 @@ const Contact = () => {
           </Stack>
           <Button
             isLoading={state.submitting}
-            loadingText="Enviando..."
+            loadingText="Submitting..."
             bg="#333333"
             color="white"
             size="md"
@@ -105,7 +105,7 @@ const Contact = () => {
             mt="3rem !important"
             pointerEvents={state.succeeded ? "none" : "auto"}
           >
-            {state.succeeded ? "Enviado" : "Enviar"}
+            {state.succeeded ? "Sent" : "Send"}
           </Button>
         </form>
       </Box>

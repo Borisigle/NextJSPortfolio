@@ -36,6 +36,7 @@ const styles = {
       maxWidth: "700px",
       margin: "0 auto",
       padding: "1rem 1rem",
+      fontWeight: "400",
     },
   }),
 };
