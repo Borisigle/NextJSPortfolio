@@ -23,7 +23,6 @@ const Contact = () => {
     "placeholderDark"
   );
 
-  console.log(state);
   return (
     <Box id="contact">
       <Text
@@ -98,7 +97,7 @@ const Contact = () => {
           <Button
             isLoading={state.submitting}
             loadingText="Submitting..."
-            bg="#333333"
+            bg={buttonColor}
             color="white"
             size="md"
             type="submit"

@@ -38,7 +38,7 @@ const Main = () => {
               React/NextJS
             </Box>
           </Text>
-          <Text pr={16} color={colorText} fontWeights="400">
+          <Text pr={16} color={colorText} fontWeight="400">
             I&#39;m a front-end developer, based in Cordoba, Argentina.
             <br /> I ♡ music, drawing, playing guitar and video games.
           </Text>

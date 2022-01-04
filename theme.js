@@ -26,6 +26,8 @@ const colors = {
   navHoverDark: "#222222",
   borderCardDark: "#252525",
   borderCardLight: "#e8eff2",
+  buttonColorDark: "#333333",
+  buttoncolorLIght: "#fafafa",
 };
 
 const styles = {
